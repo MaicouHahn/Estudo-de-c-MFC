@@ -212,9 +212,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="res\AppTeste.rc2" />
+    <None Include="res\ribbon1.mfcribbon-ms" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\AppTeste.ico" />
+    <Image Include="res\bitmap1.bmp" />
     <Image Include="settings.ico" />
     <Image Include="settings.png" />
   </ItemGroup>

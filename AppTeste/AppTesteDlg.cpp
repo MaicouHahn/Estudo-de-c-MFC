@@ -52,7 +52,7 @@ END_MESSAGE_MAP()
 
 
 
-CAppTesteDlg::CAppTesteDlg(CWnd* pParent /*=nullptr*/)
+Login::Login(CWnd* pParent /*=nullptr*/)
 	: CDialogEx(IDD_APPTESTE_DIALOG, pParent)
 	, LoginText(_T("ADM"))
 	, SenhaText(_T("123"))
@@ -60,27 +60,27 @@ CAppTesteDlg::CAppTesteDlg(CWnd* pParent /*=nullptr*/)
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
 }
 
-void CAppTesteDlg::DoDataExchange(CDataExchange* pDX)
+void Login::DoDataExchange(CDataExchange* pDX)
 {
 	CDialogEx::DoDataExchange(pDX);
 	DDX_Text(pDX, LoginTextField, LoginText);
 	DDX_Text(pDX, SenhaTextField, SenhaText);
 }
 
-BEGIN_MESSAGE_MAP(CAppTesteDlg, CDialogEx)
+BEGIN_MESSAGE_MAP(Login, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
-	ON_COMMAND(ID_SOBRE_INFO, &CAppTesteDlg::OnClickedInfo)
-	ON_BN_CLICKED(IDOK, &CAppTesteDlg::OnBnClickedOk)
-	ON_EN_CHANGE(LoginTextField, &CAppTesteDlg::OnEnChangeLogintextfield)
-	ON_BN_CLICKED(IDCANCEL, &CAppTesteDlg::OnBnClickedCancel)
+	ON_COMMAND(ID_SOBRE_INFO, &Login::OnClickedInfo)
+	ON_BN_CLICKED(IDOK, &Login::OnBnClickedOk)
+	ON_EN_CHANGE(LoginTextField, &Login::OnEnChangeLogintextfield)
+	ON_BN_CLICKED(IDCANCEL, &Login::OnBnClickedCancel)
 END_MESSAGE_MAP()
 
 
 // CAppTesteDlg message handlers
 
-BOOL CAppTesteDlg::OnInitDialog()
+BOOL Login::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
 
@@ -114,7 +114,7 @@ BOOL CAppTesteDlg::OnInitDialog()
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
 
-void CAppTesteDlg::OnSysCommand(UINT nID, LPARAM lParam)
+void Login::OnSysCommand(UINT nID, LPARAM lParam)
 {
 	if ((nID & 0xFFF0) == IDM_ABOUTBOX)
 	{
@@ -131,7 +131,7 @@ void CAppTesteDlg::OnSysCommand(UINT nID, LPARAM lParam)
 //  to draw the icon.  For MFC applications using the document/view model,
 //  this is automatically done for you by the framework.
 
-void CAppTesteDlg::OnPaint()
+void Login::OnPaint()
 {
 	if (IsIconic())
 	{
@@ -158,7 +158,7 @@ void CAppTesteDlg::OnPaint()
 
 // The system calls this function to obtain the cursor to display while the user drags
 //  the minimized window.
-HCURSOR CAppTesteDlg::OnQueryDragIcon()
+HCURSOR Login::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
@@ -167,14 +167,14 @@ HCURSOR CAppTesteDlg::OnQueryDragIcon()
 
 
 
-void CAppTesteDlg::OnClickedInfo()
+void Login::OnClickedInfo()
 {
 	CAboutDlg about1;
 	about1.DoModal();
 }
 
 
-void CAppTesteDlg::OnBnClickedOk()
+void Login::OnBnClickedOk()
 {
 	
 
@@ -204,7 +204,7 @@ void CAppTesteDlg::OnBnClickedOk()
 }
 
 
-void CAppTesteDlg::OnEnChangeLogintextfield()
+void Login::OnEnChangeLogintextfield()
 {
 	// TODO:  If this is a RICHEDIT control, the control will not
 	// send this notification unless you override the CDialogEx::OnInitDialog()
@@ -215,7 +215,7 @@ void CAppTesteDlg::OnEnChangeLogintextfield()
 }
 
 
-void CAppTesteDlg::OnBnClickedCancel()
+void Login::OnBnClickedCancel()
 {
 	// TODO: Add your control notification handler code here
 	CDialogEx::OnCancel();

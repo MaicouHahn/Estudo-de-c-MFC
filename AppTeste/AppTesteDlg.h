@@ -6,15 +6,15 @@
 
 
 // CAppTesteDlg dialog
-class CAppTesteDlg : public CDialogEx
+class Login : public CDialogEx
 {
 // Construction
 public:
-	CAppTesteDlg(CWnd* pParent = nullptr);	// standard constructor
+	Login(CWnd* pParent = nullptr);	// standard constructor
 
 // Dialog Data
 #ifdef AFX_DESIGN_TIME
-	enum { IDD = IDD_APPTESTE_DIALOG };
+	enum { IDD = IDD_IDD_CLOGIN	};
 #endif
 
 	protected:

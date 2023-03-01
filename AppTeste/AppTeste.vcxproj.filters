@@ -75,6 +75,9 @@
     <None Include="res\AppTeste.rc2">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="res\ribbon1.mfcribbon-ms">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\AppTeste.ico">
@@ -84,6 +87,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="settings.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap1.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
