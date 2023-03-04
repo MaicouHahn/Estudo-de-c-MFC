@@ -1,5 +1,7 @@
 #pragma once
 #include "afxdialogex.h"
+#include <afxtempl.h>
+#include "Pessoa.h"
 #include "iostream"
 
 
@@ -23,14 +25,21 @@ protected:
 
 	DECLARE_MESSAGE_MAP()
 public:
-	afx_msg void OnBnClickedOk();
+	CArray<Pessoa, Pessoa&>ListaDePessoas;
 	CString Nome;
 	CString Email;
 	int Idade;
-	CString nOmE;
-	CString eMaIL;
-	int iDaDe;
-
+	Pessoa *p1;
 	CString CpfText;
 	CString Endereco;
+	CString IdText;
+	afx_msg void OnBnClickedCadastrar();
+	CString EditNome;
+	CString EditID;
+	CString EditEmail;
+	int EditIdade;
+	CString EditCpf;
+	CString EditEndereco;
+	afx_msg void OnBnClickedButton1();
+	afx_msg void OnBnClickedEditarCadastro();
 };

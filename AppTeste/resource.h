@@ -2,6 +2,7 @@
 // Microsoft Visual C++ generated include file.
 // Used by AppTeste.rc
 //
+#define ID_PROCURAR                     3
 #define IDM_ABOUTBOX                    0x0010
 #define IDD_ABOUTBOX                    100
 #define Sobre                           100
@@ -26,6 +27,12 @@
 #define EmailTextField                  1016
 #define IdadeLabel                      1017
 #define IdadeTextField                  1018
+#define NomeLabel2                      1019
+#define NomeTextField2                  1020
+#define EmailLabel2                     1021
+#define EmailTextField2                 1022
+#define IdadeLabel2                     1023
+#define IdadeTextField2                 1024
 #define IDC_BUTTON1                     1029
 #define IDC_BUTTON2                     1030
 #define IDC_BUTTON3                     1031
@@ -50,7 +57,15 @@
 #define EnderecoTextField               1051
 #define EnderecoLabel                   1052
 #define CpfLabel                        1053
+#define EnderecoLabel2                  1054
+#define EnderecoTextField2              1055
 #define CpfComMascara                   1056
+#define CpfLabel2                       1057
+#define CpfComMascara2                  1058
+#define BT_CADASTRAR                    1059
+#define ID_TEXT                         1061
+#define ID_TEXT2                        1062
+#define IDC_LIST1                       1064
 #define ID_SOBRE_INFO                   32771
 #define ID_CADASTRO_NOVO                32772
 #define ID_CALCULADORA_CALCULAR         32773
@@ -62,7 +77,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        151
 #define _APS_NEXT_COMMAND_VALUE         32775
-#define _APS_NEXT_CONTROL_VALUE         1057
+#define _APS_NEXT_CONTROL_VALUE         1065
 #define _APS_NEXT_SYMED_VALUE           104
 #endif
 #endif

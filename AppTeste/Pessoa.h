@@ -5,6 +5,7 @@
 class Pessoa
 {
 private:
+	CString id;
 	CString nome;
 	CString email;
 	CString cpf;
@@ -12,13 +13,18 @@ private:
 	int idade;
 
 public:
-	Pessoa(CString nome, CString email,int idade,CString cpf,CString endereco) {
+	Pessoa(){}
+	Pessoa(CString id,CString nome, CString email,int idade,CString cpf,CString endereco) {
+		this->id = id;
 		this->nome = nome;
 		this->email = email;
 		this->idade = idade;
 		this->cpf = cpf;
 		this->endereco = endereco;
 	
+	}
+	CString getId() {
+		return this->id;
 	}
 	CString getEndereco() {
 		return this->endereco;
@@ -35,5 +41,26 @@ public:
 	int getIdade() {
 		return this->idade;
 	}
+
+
+	void setId(CString id) {
+		this->id = id;
+	}
+	void setNome(CString nome) {
+		this->nome = nome;
+	}
+	void setCpf(CString cpf) {
+		this->cpf = cpf;
+	}
+	void setEndereco(CString endereco) {
+		this->endereco = endereco;
+	}
+	void setEmail(CString email) {
+		this->email = email;
+	}
+	void setIdade(int idade) {
+		this->idade = idade;
+	}
+
 };
 

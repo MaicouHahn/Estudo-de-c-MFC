@@ -18,6 +18,7 @@ Calc::Calc(CWnd* pParent /*=nullptr*/)
 	, numero2(_T("0.0"))
 	, operador(' ')
 	, resultado(0.0)
+	
 {
 
 }
