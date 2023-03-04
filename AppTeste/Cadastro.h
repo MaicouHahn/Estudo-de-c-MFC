@@ -30,7 +30,6 @@ public:
 	CString Email;
 	int Idade;
 	Pessoa *p1;
-	CString CpfText;
 	CString Endereco;
 	CString IdText;
 	afx_msg void OnBnClickedCadastrar();
@@ -38,8 +37,10 @@ public:
 	CString EditID;
 	CString EditEmail;
 	int EditIdade;
-	CString EditCpf;
 	CString EditEndereco;
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnBnClickedEditarCadastro();
+	CString EditCpf;
+	CString CpfText;
+	afx_msg void OnBnClickedButtonEditar();
 };

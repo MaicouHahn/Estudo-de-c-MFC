@@ -45,15 +45,15 @@ void Cadastro::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, NomeTextField, Nome);
 	DDX_Text(pDX, EmailTextField, Email);
 	DDX_Text(pDX, IdadeTextField, Idade);
-	DDX_Text(pDX, CpfComMascara, CpfText);
 	DDX_Text(pDX, EnderecoTextField, Endereco);
 	DDX_Text(pDX, ID_TEXT, IdText);
 	DDX_Text(pDX, NomeTextField2, EditNome);
 	DDX_Text(pDX, ID_TEXT2, EditID);
 	DDX_Text(pDX, EmailTextField2, EditEmail);
 	DDX_Text(pDX, IdadeTextField2, EditIdade);
-	DDX_Text(pDX, CpfComMascara2, EditCpf);
 	DDX_Text(pDX, EnderecoTextField2, EditEndereco);
+	DDX_Text(pDX, IDC_CPF_TEXTFIELD2, EditCpf);
+	DDX_Text(pDX, IDC_CPF_TEXTFIELD, CpfText);
 }
 
 
@@ -61,6 +61,7 @@ BEGIN_MESSAGE_MAP(Cadastro, CDialogEx)
 	ON_BN_CLICKED(BT_CADASTRAR, &Cadastro::OnBnClickedCadastrar)
 	ON_BN_CLICKED(IDC_BUTTON1, &Cadastro::OnBnClickedButton1)
 	ON_BN_CLICKED(ID_PROCURAR, &Cadastro::OnBnClickedEditarCadastro)
+	ON_BN_CLICKED(IDC_BUTTON_EDITAR, &Cadastro::OnBnClickedButtonEditar)
 END_MESSAGE_MAP()
 
 
@@ -74,6 +75,13 @@ void Cadastro::OnBnClickedCadastrar()
 	p1 = new Pessoa(IdText, Nome, Email, Idade, CpfText, Endereco);
 	ListaDePessoas.Add(*p1);
 	TRACE(_T("\nNome: %s\nEmail: %s\nIdade: %d\nCPF: %s\nEndereco: %s\n"), p1->getNome(), p1->getEmail(), p1->getIdade(), p1->getCpf(), p1->getEndereco());
+	IdText = _T("");
+	Nome = _T("");
+	Email = _T("");
+	Idade = 0;
+	CpfText = _T("");
+	Endereco = _T("");
+
 	UpdateData(FALSE);
 }
 
@@ -93,11 +101,11 @@ void Cadastro::OnBnClickedButton1()
 
 void Cadastro::OnBnClickedEditarCadastro()
 {
-	
 	bool encontrou = false;
 	Pessoa *p2;
-
-	for (int i = 0;i < ListaDePessoas.GetSize();i++) {
+	UpdateData(TRUE);
+	for (int i = 0;i < ListaDePessoas.GetSize();i++) 
+	{
 
 		if (ListaDePessoas.GetAt(i).getId()== EditID) {
 			p2 = new Pessoa(ListaDePessoas.GetAt(i).getId(), 
@@ -112,7 +120,6 @@ void Cadastro::OnBnClickedEditarCadastro()
 			EditIdade = p2->getIdade();
 			EditCpf = p2->getCpf();
 			EditEndereco = p2->getEndereco();
-			TRACE(_T("CPF: %s"), p2->getCpf());
 			encontrou = true;
 			UpdateData(FALSE);
 		}
@@ -120,15 +127,22 @@ void Cadastro::OnBnClickedEditarCadastro()
 			encontrou = false;
 		}
 
-		if (encontrou) {
-			MessageBox(NULL, _T("Usuario Encontrado"), MB_OK);
-		}
-		else {
-			if (ListaDePessoas.IsEmpty()==true) {
-				MessageBox(NULL, _T("Usuario nao Encontrado"), MB_ICONWARNING);
-			}
-			MessageBox(NULL, _T("Usuario nao Encontrado"), MB_ICONWARNING);
-		}
 	}
 
+	if (encontrou==true) {
+		MessageBox(NULL, _T("Usuario Encontrado"), MB_OK);
+	}
+	else {
+		if (ListaDePessoas.IsEmpty() == true) {
+			MessageBox(NULL, _T("Usuario nao Encontrado"), MB_ICONWARNING);
+		}
+		MessageBox(NULL, _T("Usuario nao Encontrado"), MB_ICONWARNING);
+	}
+
+}
+
+
+void Cadastro::OnBnClickedButtonEditar()
+{
+	
 }

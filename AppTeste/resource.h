@@ -61,11 +61,12 @@
 #define EnderecoTextField2              1055
 #define CpfComMascara                   1056
 #define CpfLabel2                       1057
-#define CpfComMascara2                  1058
 #define BT_CADASTRAR                    1059
 #define ID_TEXT                         1061
 #define ID_TEXT2                        1062
-#define IDC_LIST1                       1064
+#define IDC_CPF_TEXTFIELD               1065
+#define IDC_CPF_TEXTFIELD2              1066
+#define IDC_BUTTON_EDITAR               1067
 #define ID_SOBRE_INFO                   32771
 #define ID_CADASTRO_NOVO                32772
 #define ID_CALCULADORA_CALCULAR         32773
@@ -77,7 +78,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        151
 #define _APS_NEXT_COMMAND_VALUE         32775
-#define _APS_NEXT_CONTROL_VALUE         1065
+#define _APS_NEXT_CONTROL_VALUE         1068
 #define _APS_NEXT_SYMED_VALUE           104
 #endif
 #endif
